@@ -1,1 +1,184 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* Reseteo */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Generales */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #67666e;
+}
+
+hr {
+    margin-top: 0.5em;
+}
+
+button {
+    background-color: #008489;
+    color: white;
+    border: 1px solid #008489;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    transition: all 400ms ease-in-out;
+}
+
+@media (max-width: 440px) {
+    button {
+        width: 100%;
+    }
+}
+
+button:hover {
+    background-color: white;
+    color: #008489;
+    cursor: pointer;
+}
+
+button[disabled] {
+    background-color: rgba(0, 132, 137, 0.3);
+    border: 1px solid rgba(0, 132, 137, 0.3);
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Layout */
+
+.fila {
+    width: 100%;
+    display: flex;
+    padding: 0.5em;
+}
+
+.col-100 {
+    width: 100%;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-100.check {
+    flex-direction: row;
+    align-items: center;
+}
+
+.col-100.buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.col-50 {
+    width: 50%;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 720px) {
+    .fila {
+        flex-direction: column;
+    }
+
+    .col-50 {
+        width: 100%;
+    }
+}
+
+#welcome {
+    display: none;
+}
+
+/* Formularios */
+
+form {
+    background-color: white;
+    width: 40%;
+    margin: 2em auto;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+}
+
+@media (max-width: 1080px) {
+    form {
+        width: 60%;
+    }
+}
+
+@media (max-width: 720px) {
+    form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 440px) {
+    form {
+        width: calc(100% - 2em);
+    }
+}
+
+label {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+}
+
+input {
+    padding: 0.5em;
+    font-size: 1.2em;
+    color: #67666e;
+    border-radius: 0.3em;
+    border: 1px solid #67666e;
+}
+
+input[type="checkbox"] {
+    margin-right: 1em;
+}
+
+/* Modals */
+
+#overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+}
+
+#modal {
+    background-color: white;
+    width: 60vw;
+    height: 80vh;
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 0.5em;
+    overflow: auto;
+    display: none;
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+}
+
+@media (max-width: 720px) {
+    #modal {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 440px) {
+    #modal {
+        width: calc(100vw - 2em);
+    }
+}
+
+
