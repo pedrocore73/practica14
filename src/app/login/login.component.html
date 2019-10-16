@@ -13,9 +13,9 @@
     </div>
     <div class="fila">
         <div class="col-100 button">
-            <button>
+            <button [ngClass]="{'wait': esperando}">
                 <span *ngIf="!esperando">Iniciar sesión</span>
-                <span *ngIf="esperando"><img src="assets/refresh-cw.svg" alt=""></span>
+                <span *ngIf="esperando"><img class="spinner" src="assets/refresh-cw.svg" alt=""></span>
             </button>
         </div>
     </div>

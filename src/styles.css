@@ -35,9 +35,13 @@ button {
 }
 
 button:hover {
-    background-color: white;
-    color: #008489;
+    background-color: #005c5f;
     cursor: pointer;
+}
+
+button.wait:hover {
+    background-color: #008489;
+    cursor: default;
 }
 
 button[disabled] {
@@ -45,6 +49,84 @@ button[disabled] {
     border: 1px solid rgba(0, 132, 137, 0.3);
     color: white;
     cursor: not-allowed;
+}
+
+button.jumbo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+}
+
+button.jumbo img {
+    height: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+button.jumbo.orange {
+    background-color: #c86101;
+    border: 1px solid #c86101;
+}
+
+button.jumbo.orange:hover {
+    background-color: #a04e01;
+    border: 1px solid #a04e01;
+}
+
+button.jumbo.crimson {
+    background-color: #c81801;
+    border: 1px solid #c81801;
+}
+
+button.jumbo.crimson:hover {
+    background-color: #971201;
+    border: 1px solid #971201;
+}
+
+button.jumbo.blue {
+    background-color: #0157c8;
+    border: 1px solid #0157c8;
+}
+
+button.jumbo.blue:hover {
+    background-color: #0147a3;
+    border: 1px solid #0147a3;
+}
+
+button.jumbo.brown {
+    background-color: #a14901;
+    border: 1px solid #a14901;
+}
+
+button.jumbo.brown:hover {
+    background-color: #813b01;
+    border: 1px solid #813b01;
+}
+
+button.jumbo.violet {
+    background-color: #a1016c;
+    border: 1px solid #a1016c;
+}
+
+button.jumbo.violet:hover {
+    background-color: #850159;
+    border: 1px solid #850159;
+}
+
+.spinner {
+    animation: spin-animation 1500ms infinite linear;
+}
+
+/* Animaciones */
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
 }
 
 /* Layout */
@@ -70,6 +152,12 @@ button[disabled] {
 .col-100.buttons {
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.col-100.titulos {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .col-50 {
