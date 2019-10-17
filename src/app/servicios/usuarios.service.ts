@@ -1,21 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RbacService {
+export class UsuariosService {
 
-  urlLogin = environment.urlLogin;
+  urlUsuarios = environment.urlUsuarios;
 
   constructor(private http: HttpClient) { }
 
-  login(credenciales) {
-    return this.http.post(this.urlLogin, credenciales).pipe(
+  getUsuarios() {
+    return this.http.get(this.urlUsuarios).pipe(
       map((res: any)=>{
-        console.log(res);
         return res;
       })
     )

@@ -34,9 +34,19 @@ button {
     }
 }
 
+button.outline {
+    border: 1px solid #008489;
+    background-color: white;
+    color: #008489;
+}
+
 button:hover {
     background-color: #005c5f;
     cursor: pointer;
+}
+
+button.outline:hover {
+    color: white;
 }
 
 button.wait:hover {
@@ -115,6 +125,14 @@ button.jumbo.violet:hover {
 
 .spinner {
     animation: spin-animation 1500ms infinite linear;
+}
+
+.m-l-small {
+    margin-left: 0.5em;
+}
+
+.m-r-small {
+    margin-right: 0.5em;
 }
 
 /* Animaciones */
@@ -227,6 +245,20 @@ input[type="checkbox"] {
     margin-right: 1em;
 }
 
+select {
+    padding: 0.5em 0.5em 0.5em 2em;
+    font-size: 1.2em;
+    color: #67666e;
+    border-radius: 0.3em;
+    border: 1px solid #67666e;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('./assets/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: 5px 8px;
+}
+
 /* Modals */
 
 #overlay {
@@ -269,4 +301,27 @@ input[type="checkbox"] {
     }
 }
 
+/* Tablas */
 
+table {
+    width: 100%;
+}
+
+table th {
+    border: 2px solid #008489;
+    background-color: #008489;
+    color: white;
+    padding: 0.5em 1em;
+}
+
+table td {
+    padding: 0.5em 1em;
+}
+
+table tr:nth-child(even) td {
+    border: 2px solid rgba(0, 132, 137, 0.3);
+}
+
+table tr:nth-child(odd) td {
+    background-color: rgba(0, 132, 137, 0.3);
+}
