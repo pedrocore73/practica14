@@ -20,6 +20,17 @@ export class ListadoUsuariosComponent implements OnInit {
     this.usuariosService.getUsuarios()
                 .subscribe((res: any)=>{
                   this.usuarios = res.usuarios;
+                }, (error: any)=>{
+                  console.log(error);
+                })
+  }
+
+  eliminarUsuario(id){
+    this.usuariosService.deleteUsuario(id)
+                .subscribe((res: any)=>{
+                  this.cargarUsuarios();
+                }, (error: any)=>{
+                  console.log(error);
                 })
   }
 

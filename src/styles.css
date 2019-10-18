@@ -40,6 +40,16 @@ button.outline {
     color: #008489;
 }
 
+button.warning {
+    background-color: #e9c018;
+    border: 1px solid #e9c018;
+}
+
+button.danger {
+    background-color: #e93718;
+    border: 1px solid #e93718;
+}
+
 button:hover {
     background-color: #005c5f;
     cursor: pointer;
@@ -52,6 +62,17 @@ button.outline:hover {
 button.wait:hover {
     background-color: #008489;
     cursor: default;
+}
+
+
+button.warning:hover {
+    background-color: #b89712;
+    border: 1px solid #b89712;
+}
+
+button.danger:hover {
+    background-color: #b92c13;
+    border: 1px solid #b92c13;
 }
 
 button[disabled] {
@@ -245,6 +266,10 @@ input[type="checkbox"] {
     margin-right: 1em;
 }
 
+input.password {
+    background-color: rgb(235, 235, 228);
+}
+
 select {
     padding: 0.5em 0.5em 0.5em 2em;
     font-size: 1.2em;
@@ -312,6 +337,16 @@ table th {
     background-color: #008489;
     color: white;
     padding: 0.5em 1em;
+}
+
+table.usuarios th {
+    text-align: left;
+}
+
+table.usuarios th:nth-child(4),
+table.usuarios td:nth-child(4) {
+    background-color: transparent;
+    border: none;
 }
 
 table td {

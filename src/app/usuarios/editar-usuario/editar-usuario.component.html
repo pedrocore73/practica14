@@ -1,13 +1,13 @@
 <div class="fila">
     <div class="col-100">
-        <h1>Nuevo usuario</h1>
+        <h1>Editar usuario</h1>
     </div>
 </div>
-<form [formGroup]="formUser" (ngSubmit)="registrarUser()">
+<form [formGroup]="formUser" (ngSubmit)="modificarUser()">
     <div class="fila">
         <div class="col-50">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" formControlName="nombre" #nombre>
+            <input type="text" id="nombre" formControlName="nombre">
         </div>
         <div class="col-50">
             <label for="apellidos">Apellidos</label>
@@ -17,15 +17,16 @@
     <div class="fila">
         <div class="col-100">
             <label for="email">Correo electrónico</label>
-            <input type="email" id="email" formControlName="email">
+            <input type="email" id="email" formControlName="email" disabled>
         </div>
     </div>
-    <div class="fila">
+    <!-- <div class="fila">
         <div class="col-100">
             <label for="password">Contraseña</label>
-            <input type="password" id="password" formControlName="password">
+            <input type="password" id="password" class="password"
+                   formControlName="password" placeholder="****">
         </div>
-    </div>
+    </div> -->
     <div class="fila">
         <div class="col-100">
             <label for="rol">Rol</label>
@@ -40,12 +41,8 @@
     <div class="fila">
         <div class="col-100 buttons">
             <button class="outline" routerLink="/listado-usuarios">Cancelar</button>
-            <button type="submit" class="m-l-small">Crear usuario</button>
-        </div>
-    </div>
-    <div class="fila">
-        <div class="col-100">
-            <p>{{mensaje}}</p>
+            <button type="submit" class="m-l-small">Guardar cambios</button>
         </div>
     </div>
 </form>
+
