@@ -20,4 +20,12 @@ export class UsuariosService {
     )
   }
 
+  postUsuario(usuario) {
+    return this.http.post(this.urlUsuarios, usuario).pipe(
+      map((res: any)=>{
+        return res;
+      })
+    )
+  }
+
 }
